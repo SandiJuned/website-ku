@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --warnaUtama : #000000;
+  --warnaKedua : #21201e;
+  
+  --sectionPading :6rem 1rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family:"Montserrat", Sans-Serif;
+}
+
+h1,h2,h3,h4,h5,h6, strong {
+color: var(--warnaUtama);
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.9rem;
+}
+
+p, span, label, input,textarea, li {
+  color: var(--warnaKedua);
+}
+
+a {
+  text-decoration: none;
+}
+header{
+  box-shadow: 0 10px 15px #cc916c ;
+  position: relative;
+}
+
+.main-content {
+  width: 1200px;
+  margin : 0 auto; 
+  
+}
+
+@media screen and (max-width:1200px) {
+  .main-content {
+    width: 90%;
+  }
+}
+
+/*title*/
+.pre-title {
+  text-transform: uppercase;
+  letter-spacing: .5rem;
+  color: var(--warnaKedua);
+  position: relative;
+  padding-left: 40px;
+  width: fit-content;
+  font-weight: 400;
+  font-size : .9rem;
+}
+
+.pre-title::before {
+  contain: "";
+  width: 30px;
+  height: 1px;
+  background: var(--warnaKedua);
+  position: absolute;
+  display: block;
+  left: 0;
+  top : 50%;
+}
+
+/* layout */
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+}
+/* Logo dan navigasi Menu */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 0;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 3rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.logo a {
+  color:var(--warnaUtama);
+}
+
+nav ul li {
+  display: flex;
+  align-items: center;
+}
+
+nav ul li a {
+  color: var(--warnaUtama);
+}
+
+/* burger */
+.burger div {
+  width: 25px;
+  height: 2px;
+  background-color: #000;
+  margin : 7px;
+  transition: all .3s;
+  z-index: 99;
+}
+
+.burger {
+  display: none;
+  z-index: 99;
+  position: fixed;
+  top: 33px;
+  right: 35px;
+}
+
+/* Hero Section*/
+#hero {
+  height: 720px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.hero-name {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0.5rem 0 1rem ;
+}
+
+.hero-name span {
+  color: #f57236;
+}
+
+.hero-right img {
+  width: 90%;
+}
+
+.hero-right {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-left p {
+  font-size: 0.8rem;
+  line-height: 20px;
+}
+
+#belajar {
+  background-color: #ffd6bf;
+  padding: var(--sectionPading);
+}
+
+.section-title {
+  margin : 0 0 2rem;
+  font-size: 2rem;
+}
+.belajar .pre-title {
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+}
+
+.belajar-title {
+  text-align: center;
+}
+
+.bagian{
+  padding: 3rem 2rem;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0px 0px 15px #cc916c;
+  cursor: pointer;
+}
+
+a .bagian:hover {
+  box-shadow: 0px 0px 15px #eb7831;
+}
+
+.bagian h4{
+  margin: 1.5rem 0;
+  font-weight: 500;
+  font-size :1.05rem;
+}
+
+.belajar-icon{
+  width: fit-content;
+  margin : 0 auto;
+  border-radius: 50%;
+}
+.belajar-icon img{
+  width: 80%;
+}
+
+/* portofolio*/
+#karya {
+  padding: var(--sectionPading);
+  box-shadow: 0 -10px 15px #cc916c ;
+  position: relative;
+}
+
+.portofolio {
+  border-radius: 1rem;
+  border : 1px solid black;
+}
+
+.portofolio-cover{
+  height: 250px;
+}
+
+.portofolio-cover img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+ border-radius: 1rem 1rem 0 0;
+}
+
+.portofolio-info {
+  padding:2rem 1.5rem;
+}
+
+.portofolio-title{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.portofolio-tags div{
+  display: flex;
+}
+
+.portofolio-tags div p {
+  margin: 5px 5px 5px 0;
+  padding: 0 1rem;
+  width: textarea;
+  background-color: #4ff;
+  border-radius: 1rem;
+}
+
